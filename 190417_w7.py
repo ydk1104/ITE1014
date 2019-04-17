@@ -6,9 +6,9 @@ def different(N) :
         N//=10
     return 1
 
-def itos(N) :
+def itos(N, MAX) :
     temp = []
-    while N :
+    for i in range(MAX) :
         temp.append(N%10)
         N//=10
     return temp
@@ -19,9 +19,9 @@ def baseball():
     from random import randint
     #0-11, 988-999는 중복되는 숫자이므로 범위에서 제거함
     while(not different(targetNum)) : targetNum = randint(12, 987)
-    print(targetNum)
-    target = itos(targetNum)
-    print(target)
+    print("Test, answer is",targetNum)
+    target = itos(targetNum, MAX)
+#    print(target)
     strike = 0
     ball = 0
     while strike != MAX :
@@ -29,7 +29,7 @@ def baseball():
         while(not different(guess)) : guess = int(input("중복이 있어요! 다시 입력해주세요"))
         strike = 0
         ball = 0
-        guess = itos(guess)
+        guess = itos(guess, MAX)
         for i in range(MAX) :
             if target[i] == guess[i] : strike+=1
             for j in range(MAX) :
