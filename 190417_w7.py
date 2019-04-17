@@ -68,3 +68,5 @@ def test():
     work = [baseball, threesixnine]
     work[N-1]()
     return test()
+
+test()
