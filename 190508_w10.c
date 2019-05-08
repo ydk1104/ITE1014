@@ -6,7 +6,8 @@ void guess(){
 	srand(time(NULL));
 	int to=rand()%20+1;
 	int N;
-	for(int cnt=1; cnt<=6; cnt++){
+	int cnt;
+	for(cnt=1; cnt<=6; cnt++){
 		printf("guess the number(range : [1,20])\n");
 		scanf("%d", &N);
 		if(N==to){
@@ -25,7 +26,8 @@ void dan(){
 	int N;
 	scanf("%d", &N);
 	printf("********%ddan********\n", N);
-	for(int i=1; i<=9; i++){
+	int i;
+	for(i=1; i<=9; i++){
 		printf("%d*%d=%d\n", N, i, N*i);
 	}
 	printf("***********************\n");
@@ -41,7 +43,8 @@ void printstar1(){
 	int N;
 	printf("how many lines?\n");
 	scanf("%d", &N);
-	for(int i=1; i<=N; i++){
+	int i;
+	for(i=1; i<=N; i++){
 		printstar(N-i, 2*i-1);
 	}
 }
@@ -50,10 +53,11 @@ void printstar2(){
 	int N;
 	printf("how many lines?\n");
 	scanf("%d", &N);
-	for(int i=N; i>1; i--){
+	int i;
+	for(i=N; i>1; i--){
 		printstar(N-i, 2*i-1);
 	}
-	for(int i=1; i<=N; i++){
+	for(i=1; i<=N; i++){
 		printstar(N-i, 2*i-1);
 	}
 }
