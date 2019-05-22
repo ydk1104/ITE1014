@@ -118,7 +118,7 @@ void word_count(int x){
 			minchar = i+'A';
 		}
 	}
-	printf("word : %d\n", word-1);
+	printf("word : %d\n", word);
 	printf("characters : %d\n", charcnt);
 	printf("letters : %d\n", lettercnt);
 	printf("most frequently: %c\n", maxchar);
